@@ -2,7 +2,7 @@ $(document).ready(function(){
   $("#dating").submit(function(event) {
     event.preventDefault();
     var gender = $("#gender").val();
-    var videoGame= $("input:radio[name=videoGame]:checked").val();
+    var videoGame = $("input:radio[name=videoGame]:checked").val();
     var age= $("input#age").val();
     /*
     function selection (gender, videoGame, age){
@@ -27,14 +27,15 @@ $(document).ready(function(){
 */
 
   if(gender === "Male"){
+
     if(videoGame === "Xbox"){
       if(age < 18) {
          $("#malexboxyoung").show();
       };
-      if((age > 18) && (age < 35)) {
+      if(age > 18 && age < 35) {
          $("#malexboxyoungAd").show();
       };
-      if((age > 35) && (age < 50)) {
+      if(age > 35 && age < 50) {
          $("#malexboxmiddleAged").show();
       };
       if(age > 50) {
@@ -71,6 +72,7 @@ $(document).ready(function(){
     };
   };
   if(gender === "female"){
+
     if(videoGame === "xbox"){
       if(age < 18) {
          $("#femalexboxyoung").show();
